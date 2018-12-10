@@ -18,6 +18,7 @@ const regex = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1
       document.querySelectorAll('.tabdata tr td:nth-child(1)')
     )
       .map(e => e.textContent)
+      .map(e => e.trim())
   });
 
   await browser.close();
